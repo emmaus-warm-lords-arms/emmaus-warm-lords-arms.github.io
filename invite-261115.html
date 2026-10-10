@@ -68,9 +68,13 @@ input::placeholder{color:#B9AC9C;font-weight:400}
 /* 만들어진 신청서 */
 #result{display:none;margin-top:26px;text-align:center}
 #result.on{display:block}
-#result .done{font-size:clamp(20px,5.2vw,24px);font-weight:800;color:var(--navy);line-height:1.5}
+#result .done{font-size:clamp(17px,4.5vw,20px);font-weight:700;color:var(--sub);line-height:1.5}
 #result img{display:block;width:100%;max-width:520px;margin:16px auto 0;border-radius:14px;border:1px solid var(--line);
  box-shadow:0 6px 22px -12px rgba(20,73,123,.4);-webkit-touch-callout:default}
+.press{margin:18px auto 0;max-width:520px;padding:4px 8px 0;color:var(--navy);
+ font-size:clamp(20px,5.4vw,24px);font-weight:800;line-height:1.45}
+.press u{text-decoration:none;box-shadow:inset 0 -.42em 0 #CFEBE1}
+.press .arr{display:block;font-size:1.25em;line-height:1;margin-top:4px}
 .hint{margin-top:16px;font-size:clamp(16px,4.2vw,19px);line-height:1.75;color:var(--sub)}
 .hint b{color:var(--navy)}
 .hint .soft{display:block;font-size:.88em;opacity:.8}
@@ -118,6 +122,7 @@ footer p{margin:8px 0 0;font-size:13px;color:#A79683;line-height:1.7;font-family
 
     <div id="result">
       <div class="done">대상자 이름 작성하기를 완성했습니다</div>
+      <div class="press">아래 그림을 <u>길게 눌러</u> 저장하세요<span class="arr" aria-hidden="true">↓</span></div>
       <div id="imgbox"></div>
       <div class="hint">그림을 <b>길게 누르면</b><br>「이미지 저장」이 나타납니다.<br>저장한 그림을 <b>공동체 리더</b>에게 보내주세요.
         <span class="soft">(카톡에서 사진 저장하는 방법과 같습니다)</span></div>
