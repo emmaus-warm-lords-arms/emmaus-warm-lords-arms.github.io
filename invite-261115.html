@@ -114,10 +114,10 @@ footer p{margin:8px 0 0;font-size:13px;color:#A79683;line-height:1.7;font-family
 
     <p class="due"><b>10월 30일(금)</b>까지<br>공동체 리더에게 보내주세요</p>
 
-    <button type="button" class="go" id="make">신청서 만들기</button>
+    <button type="button" class="go" id="make">초청대상자 이름 보내기</button>
 
     <div id="result">
-      <div class="done">신청서가 만들어졌습니다</div>
+      <div class="done">대상자 이름 작성하기를 완성했습니다</div>
       <div id="imgbox"></div>
       <div class="hint">그림을 <b>길게 누르면</b><br>「이미지 저장」이 나타납니다.<br>저장한 그림을 <b>공동체 리더</b>에게 보내주세요.
         <span class="soft">(카톡에서 사진 저장하는 방법과 같습니다)</span></div>
@@ -161,7 +161,7 @@ function save(){
 }
 function changed(){
   save();
-  if(result.classList.contains('on')) make.textContent='신청서 다시 만들기';
+  if(result.classList.contains('on')) make.textContent='대상자 이름 다시 작성하기';
 }
 function toast(msg){
   var el=$('toast'); if(!el){ el=document.createElement('div'); el.id='toast'; document.body.appendChild(el); }
@@ -245,7 +245,7 @@ make.onclick=function(){
       blobUrl=URL.createObjectURL(b);
       imgbox.innerHTML='<img src="'+blobUrl+'" alt="가족초청주일 신청서 그림">';
       result.classList.add('on');
-      make.disabled=false; make.textContent='신청서 다시 만들기';
+      make.disabled=false; make.textContent='대상자 이름 다시 작성하기';
       setTimeout(function(){ result.scrollIntoView({behavior:'smooth',block:'start'}); },80);
     },'image/png');
   });
